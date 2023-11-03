@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="  w-full mx-auto  ">
+    <div className="  w-full max-w-[1200px] px-[25px] mx-auto  ">
       <div className="flex-1 px-2 mx-2">Navbar Title</div>
       <div className=" flex gap-6">
         <NavLink
