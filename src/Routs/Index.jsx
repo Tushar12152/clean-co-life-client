@@ -7,6 +7,7 @@ import Register from "../Page/Register";
 import AdminLayOut from "../Components/layOut/AdminLayout"
 import AddServis from "../Page/AddServis";
 import Home from "../Page/Home";
+import PrivateRoute from "./PrivateRoute";
 
 
 const Index = createBrowserRouter([
@@ -21,7 +22,9 @@ const Index = createBrowserRouter([
             },
             {
                 path:"about",
-                element:<About></About>
+                element:<PrivateRoute>
+                    <About></About>
+                         </PrivateRoute>
             },
             {
                 path:"contact",
