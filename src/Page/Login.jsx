@@ -4,6 +4,8 @@ import { AiFillEyeInvisible,AiFillEye } from 'react-icons/ai';
 import useAuth from "../Hooks/useAuth";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import useAxios from "../Hooks/useAxios";
+
 
 const Login = () => {
 
@@ -13,6 +15,7 @@ const Login = () => {
     const [email,setEmail]=useState('')
     const [password,setPassword]=useState('')
      const navigate=useNavigate()
+     const axios=useAxios()
 
     const handleLogin=async(e)=>{
         e.preventDefault()
@@ -20,6 +23,9 @@ const Login = () => {
         // console.log(email,password);
        try{
            await login(email,password)
+        //  const res=
+         await axios.post('/auth/access-token',{email})
+      // console.log(res.data);
            toast.success('logged in',{id:load})
 
            navigate('/')

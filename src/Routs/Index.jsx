@@ -8,6 +8,7 @@ import AdminLayOut from "../Components/layOut/AdminLayout"
 import AddServis from "../Page/AddServis";
 import Home from "../Page/Home";
 import PrivateRoute from "./PrivateRoute";
+import Service from "../Page/Service";
 
 
 const Index = createBrowserRouter([
@@ -24,6 +25,12 @@ const Index = createBrowserRouter([
                 path:"about",
                 element:<PrivateRoute>
                     <About></About>
+                         </PrivateRoute>
+            },
+            {
+                path:"/service",
+                element:<PrivateRoute>
+                           <Service></Service>
                          </PrivateRoute>
             },
             {

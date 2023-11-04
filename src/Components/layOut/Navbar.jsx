@@ -34,6 +34,20 @@ const handleLogOut=()=>{
           {" "}
           About{" "}
         </NavLink>
+
+
+
+        <NavLink
+          to="/service"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-red-500 underline" : ""
+          }
+        >
+          {" "}
+          Service{" "}
+        </NavLink>
+
+
           
         <NavLink
           to="/contact"
